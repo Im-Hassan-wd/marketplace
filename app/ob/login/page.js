@@ -74,7 +74,7 @@ export default function Login() {
 
         <div className="action">
           <span>
-            Don't have an account? <Link href={"/ob/new-account"}>Signup</Link>
+            Dont have an account? <Link href={"/ob/new-account"}>Signup</Link>
           </span>
           <button className={emptyFields ? "btn" : "btn active"}>Login</button>
         </div>
