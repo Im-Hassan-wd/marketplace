@@ -1,9 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Login() {
-  const [checked, setChecked] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [emptyFields, setEmptyFields] = useState(true);
@@ -28,17 +28,28 @@ export default function Login() {
 
       <div className="create-with-socials">
         <button className="social linkedin">
-          <img src="/icon/linkedin.svg" alt="Linkedin" />
+          <Image
+            src="/icon/linkedin.svg"
+            alt="Linkedin"
+            width={24}
+            height={24}
+          />
         </button>
         <button className="social google">
-          <img src="/icon/google.svg" alt="Google" />
+          <Image src="/icon/google.svg" alt="Google" width={24} height={24} />
         </button>
         <button className="social github">
-          <img src="/icon/github.svg" alt="Github" />
+          <Image src="/icon/github.svg" alt="Github" width={24} height={24} />
         </button>
       </div>
 
-      <img src="/icon/border.svg" className="seperator" alt="seperator" />
+      <Image
+        src="/icon/border.svg"
+        className="seperator"
+        alt="seperator"
+        width={50}
+        height={50}
+      />
 
       <form className="auth-form" onSubmit={handleSubmit}>
         <label>

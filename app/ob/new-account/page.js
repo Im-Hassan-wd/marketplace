@@ -1,7 +1,8 @@
 "use client";
 import "./account.css";
-import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 export default function Account() {
@@ -27,7 +28,12 @@ export default function Account() {
             }}
           >
             <div className="top">
-              <img src="/icon/briefcase.svg" alt="client" />
+              <Image
+                src="/icon/briefcase.svg"
+                alt="client"
+                width={30}
+                height={30}
+              />
               <div className="radio"></div>
             </div>
             <div className="p">
@@ -41,7 +47,12 @@ export default function Account() {
             onClick={() => setType("Freelancer")}
           >
             <div className="top">
-              <img src="/icon/user.svg" alt="freelancer" />
+              <Image
+                src="/icon/user.svg"
+                alt="freelancer"
+                width={30}
+                height={30}
+              />
               <div className="radio"></div>
             </div>
             <div className="p">
