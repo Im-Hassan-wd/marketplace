@@ -1,0 +1,130 @@
+.signup {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 600px;
+}
+.signup h3 {
+  text-align: center;
+}
+.create-with-socials {
+  margin: 20px 0;
+  display: flex;
+  gap: 10px;
+}
+.create-with-socials button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  transition: scale 0.3s ease;
+}
+.create-with-socials button:hover {
+  transform: scale(1.1);
+}
+.create-with-socials button.google {
+  background: #4a7bff;
+  border-color: #4a7bff;
+}
+.create-with-socials button.google img {
+  filter: invert(1);
+}
+.seperator {
+  width: 100%;
+}
+
+.auth-form {
+  margin: 20px 0;
+  width: 100%;
+}
+.auth-form .full-name {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.auth-form label {
+  width: 100%;
+  display: inline;
+}
+.auth-form label span {
+  display: block;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  color: var(--gray);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.auth-form .full-name input {
+  width: 100%;
+}
+.auth-form input {
+  padding: 10px 12px;
+  border: 1px solid var(--border-color);
+  background: none;
+  width: 100%;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+.auth-form .checkbox-input {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+}
+.auth-form .checkbox-input a {
+  text-transform: none;
+  text-decoration: underline;
+  color: var(--primary);
+  font-weight: 600;
+  display: inline;
+}
+.auth-form .checkbox-input .checkbox {
+  width: 20px;
+}
+.auth-form .action {
+  margin-top: 20px;
+}
+
+.action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+.action a {
+  color: var(--primary);
+  font-weight: 500;
+}
+.action .btn {
+  background: var(--border-color);
+  pointer-events: none;
+}
+.action .btn.active {
+  pointer-events: all;
+  background: var(--primary);
+}
+
+.error {
+  color: crimson;
+  background: #f5cad3;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* responsive design */
+@media (max-width: 445px) {
+  .action {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .action span {
+    margin-top: 10px;
+    order: 2;
+  }
+  .auth-form .checkbox-input p {
+    font-size: 0.9rem;
+  }
+}

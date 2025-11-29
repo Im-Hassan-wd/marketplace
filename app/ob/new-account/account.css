@@ -1,0 +1,85 @@
+.new-account {
+  margin: 80px auto;
+  max-width: 700px;
+  text-align: center;
+  margin-bottom: 0;
+}
+.new-account p {
+  margin-top: 20px;
+}
+.account-type {
+  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.account-type .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.account-type button {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 150px;
+  text-align: left;
+  border: 1px solid var(--border-color);
+  background: none;
+  padding: 20px;
+  border-radius: 10px;
+  transition: border 0.3s ease;
+}
+.account-type button:hover {
+  border-color: var(--primary);
+}
+.account-type button.active {
+  border-color: var(--primary);
+}
+.account-type button.active .radio {
+  border: 5px solid var(--primary);
+}
+.account-type button .radio {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+}
+.account-type .p {
+  margin-top: auto;
+  max-width: 250px;
+  font-size: 1.2rem;
+}
+.account-type span {
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .account-type {
+    flex-direction: column;
+  }
+  .account-type button {
+    width: 100%;
+  }
+  .account-type .p {
+    max-width: initial;
+  }
+}
+@media (max-width: 445px) {
+  .new-account {
+    margin: 40px auto;
+  }
+  .account-type {
+    margin: 30px 0;
+  }
+  .action {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .action span {
+    margin-top: 10px;
+    order: 2;
+  }
+}
