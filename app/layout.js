@@ -1,9 +1,9 @@
 import "./index.css";
 import "./auth.css";
 
-// components
-import Navbar from "@/components/navbar/Navbar";
+// component & context
 import { AccountProvider } from "@/context/AccountContext";
+import Navbar from "@/components/navbar/Navbar";
 
 export const metadata = {
   title: "Marketplace",
@@ -13,12 +13,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <AccountProvider>
-        <body>
+      <body>
+        <AccountProvider>
           <Navbar />
           {children}
-        </body>
-      </AccountProvider>
+        </AccountProvider>
+      </body>
     </html>
   );
 }

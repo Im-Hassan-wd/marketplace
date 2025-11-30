@@ -9,3 +9,7 @@
   font-size: 1.3rem;
   color: var(--primary);
 }
+.navbar button {
+  font-weight: 600;
+  font-size: 1rem;
+}
