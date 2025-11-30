@@ -1,13 +1,17 @@
 "use client";
+
 import "./account.css";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { useAccount } from "@/hooks/useAccount";
 
 export default function Account() {
-  const [type, setType] = useState("");
   const router = useRouter();
+  const { type, changeType } = useAccount();
+
+  console.log(type);
 
   const handleNext = () => {
     router.push("/ob/signup");
@@ -23,9 +27,7 @@ export default function Account() {
           {/* client  */}
           <button
             className={type === "Client" ? "active" : ""}
-            onClick={() => {
-              setType("Client");
-            }}
+            onClick={() => changeType("Client")}
           >
             <div className="top">
               <Image
@@ -44,7 +46,7 @@ export default function Account() {
           {/* freelancer  */}
           <button
             className={type === "Freelancer" ? "active" : ""}
-            onClick={() => setType("Freelancer")}
+            onClick={() => changeType("Freelancer")}
           >
             <div className="top">
               <Image
