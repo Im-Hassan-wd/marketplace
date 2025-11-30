@@ -15,7 +15,7 @@ export default function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [emptyFields, setEmptyFields] = useState(true);
-  const [value, setValue] = useState("");
+  const [country, setCountry] = useState("");
   const options = useMemo(() => countryList().getData(), []);
 
   const { type } = useAccount();
@@ -28,23 +28,23 @@ export default function Signup() {
     }
   };
 
-  const handleSelect = (value) => {
-    setValue(value);
+  const handleSelect = (country) => {
+    setCountry(country);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log({ firstName, lastName, email, password });
+    console.log({ firstName, lastName, email, password, country });
   };
 
   useEffect(() => {
-    if (email && password && firstName && lastName && checked) {
+    if (email && password && firstName && lastName && checked && country) {
       setEmptyFields(false);
     } else {
       setEmptyFields(true);
     }
-  }, [email, password, firstName, lastName, checked]);
+  }, [email, password, firstName, lastName, checked, country?.value]);
 
   return (
     <div className="signup">
@@ -123,10 +123,11 @@ export default function Signup() {
         </label>
 
         <label>
+          <span>Country</span>
           <Select
             className="react-select"
             options={options}
-            value={value}
+            value={country}
             onChange={handleSelect}
           />
         </label>
