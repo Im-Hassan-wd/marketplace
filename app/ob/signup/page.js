@@ -1,7 +1,12 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
+import Select from "react-select";
+import countryList from "react-select-country-list";
 import Link from "next/link";
 import Image from "next/image";
+
+// hooks
+import { useAccount } from "@/hooks/useAccount";
 
 export default function Signup() {
   const [checked, setChecked] = useState(false);
@@ -10,6 +15,10 @@ export default function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [emptyFields, setEmptyFields] = useState(true);
+  const [value, setValue] = useState("");
+  const options = useMemo(() => countryList().getData(), []);
+
+  const { type } = useAccount();
 
   const handleCheckbox = (e) => {
     if (e.target.checked) {
@@ -17,6 +26,10 @@ export default function Signup() {
     } else {
       setChecked(false);
     }
+  };
+
+  const handleSelect = (value) => {
+    setValue(value);
   };
 
   const handleSubmit = (e) => {
@@ -35,7 +48,11 @@ export default function Signup() {
 
   return (
     <div className="signup">
-      <h3>This is where incredible careers begin.</h3>
+      {type === "Freelancer" ? (
+        <h3>This is where incredible careers begin.</h3>
+      ) : (
+        <h3>This is where your brand get big.</h3>
+      )}
 
       <div className="create-with-socials">
         <button className="social linkedin">
@@ -102,6 +119,15 @@ export default function Signup() {
             name="password"
             onChange={(e) => setPassword(e.target.value.trim())}
             value={password}
+          />
+        </label>
+
+        <label>
+          <Select
+            className="react-select"
+            options={options}
+            value={value}
+            onChange={handleSelect}
           />
         </label>
 

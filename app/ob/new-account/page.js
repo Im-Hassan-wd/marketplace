@@ -3,15 +3,12 @@
 import "./account.css";
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useAccount } from "@/hooks/useAccount";
 
 export default function Account() {
   const router = useRouter();
   const { type, changeType } = useAccount();
-
-  console.log(type);
 
   const handleNext = () => {
     router.push("/ob/signup");

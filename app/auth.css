@@ -74,6 +74,9 @@
   gap: 10px;
   align-items: baseline;
 }
+.auth-form .react-select {
+  margin-bottom: 20px;
+}
 .auth-form .checkbox-input a {
   text-transform: none;
   text-decoration: underline;
