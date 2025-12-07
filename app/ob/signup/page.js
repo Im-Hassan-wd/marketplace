@@ -126,7 +126,7 @@ export default function Signup() {
             />
           </label>
 
-          {/* <label>
+          <label>
             <Select
               className="react-select"
               placeholder="Country"
@@ -134,7 +134,7 @@ export default function Signup() {
               value={country}
               onChange={handleSelect}
             />
-          </label> */}
+          </label>
 
           <label className="checkbox-input">
             <input
