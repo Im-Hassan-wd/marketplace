@@ -1,0 +1,18 @@
+.sidebar {
+  background: var(--primary-light);
+  width: fit-content;
+  position: relative;
+}
+.sidebar img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.sidebar .logo {
+  position: absolute;
+  font-size: 2rem;
+  font-weight: 500;
+  right: 20px;
+  top: 20px;
+}

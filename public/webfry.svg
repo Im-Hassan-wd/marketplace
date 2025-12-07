@@ -1,5 +1,0 @@
-<svg width="34" height="32" viewBox="0 0 34 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path className="polygon" d="M1.75 16.5674L24.25 3.57617L25 3.14355V30.8564L24.25 30.4238L1.75 17.4326L1 17L1.75 16.5674Z" stroke="white"/>
-<path className="polygon" d="M32.25 17.4326L9.75 30.4238L9 30.8564V3.14355L9.75 3.57617L32.25 16.5674L33 17L32.25 17.4326Z" stroke="white"/>
-<path className="polygon" d="M17.4326 1.75L30.4238 24.25L30.8564 25H3.14355L3.57617 24.25L16.5674 1.75L17 1L17.4326 1.75Z" stroke="white"/>
-</svg>
