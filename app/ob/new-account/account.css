@@ -1,8 +1,19 @@
+.new-account-div {
+  display: flex;
+  justify-content: center;
+}
 .new-account {
   margin: 80px auto;
-  max-width: 700px;
   text-align: center;
   margin-bottom: 0;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.new-account h3 {
+  max-width: 400px;
 }
 .new-account p {
   margin-top: 20px;
@@ -23,7 +34,6 @@
 .account-type button {
   display: flex;
   flex-direction: column;
-  width: 300px;
   height: 150px;
   text-align: left;
   border: 1px solid var(--border-color);
@@ -56,6 +66,24 @@
   font-weight: 600;
 }
 
+@media (min-width: 1001px) {
+  .new-account-div {
+    height: 100vh;
+    overflow: hidden;
+  }
+  .new-account {
+    max-width: 600px;
+  }
+}
+@media (max-width: 1000px) {
+  .new-account-div {
+    flex-direction: column;
+  }
+  .new-account {
+    margin-top: 100px;
+    margin-bottom: 30px;
+  }
+}
 @media (max-width: 640px) {
   .account-type {
     flex-direction: column;

@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useAccount } from "@/hooks/useAccount";
+import Sidebar from "@/components/sidebar/Sidebar";
 
 export default function Account() {
   const router = useRouter();
@@ -16,60 +17,63 @@ export default function Account() {
 
   return (
     <>
-      <div className="new-account">
-        <h3>How do you want to use the platform?</h3>
-        {/* <p>Select which describes you</p> */}
+      <div className="new-account-div">
+        <Sidebar src="illustration__account" />
+        <div className="new-account">
+          <h3>How do you want to use the platform?</h3>
+          {/* <p>Select which describes you</p> */}
 
-        <div className="account-type">
-          {/* client  */}
-          <button
-            className={type === "Client" ? "active" : ""}
-            onClick={() => changeType("Client")}
-          >
-            <div className="top">
-              <Image
-                src="/icon/briefcase.svg"
-                alt="client"
-                width={30}
-                height={30}
-              />
-              <div className="radio"></div>
-            </div>
-            <div className="p">
-              <span>I’m a client</span>, I need professional services
-            </div>
-          </button>
+          <div className="account-type">
+            {/* client  */}
+            <button
+              className={type === "Client" ? "active" : ""}
+              onClick={() => changeType("Client")}
+            >
+              <div className="top">
+                <Image
+                  src="/icon/briefcase.svg"
+                  alt="client"
+                  width={30}
+                  height={30}
+                />
+                <div className="radio"></div>
+              </div>
+              <div className="p">
+                <span>I’m a client</span>, I need professional services
+              </div>
+            </button>
 
-          {/* freelancer  */}
-          <button
-            className={type === "Freelancer" ? "active" : ""}
-            onClick={() => changeType("Freelancer")}
-          >
-            <div className="top">
-              <Image
-                src="/icon/user.svg"
-                alt="freelancer"
-                width={30}
-                height={30}
-              />
-              <div className="radio"></div>
-            </div>
-            <div className="p">
-              <span>I’m a freelancer</span>, I offer professional services
-            </div>
-          </button>
-        </div>
+            {/* freelancer  */}
+            <button
+              className={type === "Freelancer" ? "active" : ""}
+              onClick={() => changeType("Freelancer")}
+            >
+              <div className="top">
+                <Image
+                  src="/icon/user.svg"
+                  alt="freelancer"
+                  width={30}
+                  height={30}
+                />
+                <div className="radio"></div>
+              </div>
+              <div className="p">
+                <span>I’m a freelancer</span>, I offer professional services
+              </div>
+            </button>
+          </div>
 
-        <div className="action">
-          <span>
-            Already have an account? <Link href={"/ob/login"}>Login</Link>
-          </span>
-          <button
-            className={type == "" ? "btn" : "active btn"}
-            onClick={handleNext}
-          >
-            {type == "" ? "Create Account" : "Join as a" + " " + type}
-          </button>
+          <div className="action">
+            <span>
+              Already have an account? <Link href={"/ob/login"}>Login</Link>
+            </span>
+            <button
+              className={type == "" ? "btn" : "active btn"}
+              onClick={handleNext}
+            >
+              {type == "" ? "Create Account" : "Join as a" + " " + type}
+            </button>
+          </div>
         </div>
       </div>
     </>

@@ -51,6 +51,7 @@ export default function Signup() {
     <div className="signup">
       <Sidebar src="illustration__signup" />
       <div className="form-wrapper">
+        <h1>Begin Journey</h1>
         {type === "Freelancer" ? (
           <h3>This is where incredible careers begin.</h3>
         ) : (
@@ -125,7 +126,7 @@ export default function Signup() {
             />
           </label>
 
-          <label>
+          {/* <label>
             <Select
               className="react-select"
               placeholder="Country"
@@ -133,7 +134,7 @@ export default function Signup() {
               value={country}
               onChange={handleSelect}
             />
-          </label>
+          </label> */}
 
           <label className="checkbox-input">
             <input

@@ -20,9 +20,10 @@
 }
 .signup h3 {
   text-align: center;
+  max-width: 400px;
 }
 .create-with-socials {
-  margin: 20px 0;
+  margin: 12px 0;
   display: flex;
   gap: 10px;
 }
@@ -48,7 +49,7 @@
 }
 
 .auth-form {
-  margin: 20px 0;
+  margin: 12px 0;
   width: 100%;
 }
 .auth-form .full-name {
@@ -108,7 +109,8 @@
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  /* gap: 10px; */
+  gap: 20px;
+  flex-direction: column-reverse;
 }
 .action a {
   color: var(--primary);

@@ -1,14 +1,13 @@
 .sidebar {
   background: var(--primary-light);
   width: fit-content;
-  /* position: relative; */
   order: 1;
-  flex: 1;
-}
-.sidebar img {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex: 1;
+}
+.sidebar img {
   width: 100%;
 }
 .sidebar .logo {
@@ -17,7 +16,7 @@
   font-weight: 600;
   right: 0px;
   top: 0px;
-  padding: 20px;
+  padding: 30px;
 }
 @media (max-width: 1000px) {
   .sidebar {
