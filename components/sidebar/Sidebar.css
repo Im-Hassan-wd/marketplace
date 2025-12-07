@@ -1,7 +1,9 @@
 .sidebar {
   background: var(--primary-light);
   width: fit-content;
-  position: relative;
+  /* position: relative; */
+  order: 1;
+  flex: 1;
 }
 .sidebar img {
   display: flex;
@@ -11,8 +13,25 @@
 }
 .sidebar .logo {
   position: absolute;
-  font-size: 2rem;
-  font-weight: 500;
-  right: 20px;
-  top: 20px;
+  font-size: 1.7rem;
+  font-weight: 600;
+  right: 0px;
+  top: 0px;
+  padding: 20px;
+}
+@media (max-width: 1000px) {
+  .sidebar {
+    width: 100%;
+    overflow: hidden;
+    height: 30%;
+  }
+  .sidebar img {
+    width: 100%;
+  }
+  .sidebar .logo {
+    width: 100%;
+    left: 0px;
+    background: #fff;
+    position: fixed;
+  }
 }
