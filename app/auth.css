@@ -149,6 +149,9 @@
   }
 }
 @media (max-width: 500px) {
+  .signup h1 {
+    font-size: 3rem;
+  }
   .signup .form-wrapper {
     padding: 0 12px;
   }
