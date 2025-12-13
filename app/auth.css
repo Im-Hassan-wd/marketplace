@@ -37,13 +37,7 @@
 .create-with-socials button:hover {
   transform: scale(1.1);
 }
-.create-with-socials button.google {
-  background: #4a7bff;
-  border-color: #4a7bff;
-}
-.create-with-socials button.google img {
-  filter: invert(1);
-}
+
 .seperator {
   width: 100%;
 }
@@ -150,7 +144,7 @@
 }
 @media (max-width: 500px) {
   .signup h1 {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
   .signup .form-wrapper {
     padding: 0 12px;
