@@ -59,19 +59,19 @@ export default function Signup() {
         )}
 
         <div className="create-with-socials">
-          <button className="social linkedin">
+          {/* <button className="social linkedin">
             <Image
               src="/icon/linkedin.svg"
               alt="Linkedin"
               width={24}
               height={24}
             />
-          </button>
+          </button> */}
           <button className="social google">
             <Image src="/icon/google.svg" alt="Google" width={24} height={24} />
           </button>
-          <button className="social github">
-            <Image src="/icon/github.svg" alt="Github" width={24} height={24} />
+          <button className="social apple">
+            <Image src="/icon/apple.svg" alt="Apple" width={24} height={24} />
           </button>
         </div>
 
